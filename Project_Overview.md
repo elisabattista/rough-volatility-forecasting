@@ -2,7 +2,7 @@
 
 ## Why This Project?
 
-Volatility forecasting lies at the heart of quantitative finance. Accurate volatility estimates are essential for risk management, derivative pricing, portfolio allocation and systematic trading strategies. Despite decades of research, forecasting future volatility remains a challenging problem.
+Volatility forecasting lies at the heart of quantitative finance. Accurate volatility estimates are essential for risk management, derivative pricing, portfolio allocation, and systematic trading strategies. Despite decades of research, forecasting future volatility remains a challenging problem.
 
 Over the last decade, rough volatility has emerged as one of the most influential developments in financial modelling. By incorporating fractional dynamics and rough paths into volatility processes, these models have demonstrated a remarkable ability to reproduce several stylized facts observed in financial markets.
 
@@ -20,7 +20,7 @@ Rather than focusing exclusively on theoretical elegance, the objective was to e
 
 The project follows the evolution of volatility modelling from long-memory frameworks to modern rough volatility models.
 
-The starting point is the Comte–Renault model, which extends classical stochastic volatility dynamics by introducing fractional Brownian motion and long-range dependence.
+The starting point is the **Comte–Renault model**, which extends classical stochastic volatility dynamics by introducing fractional Brownian motion and long-range dependence.
 
 More recent empirical evidence suggests that volatility is not only persistent but also significantly rough at short time scales. This observation led to the development of the rough volatility paradigm, according to which volatility trajectories are substantially more irregular than previously assumed.
 
@@ -30,7 +30,7 @@ To investigate these ideas, the thesis studies three models:
 * Rough Fractional Stochastic Volatility (RFSV)
 * Rough Bergomi
 
-Their forecasting performance is then compared with the HAR-RV benchmark, one of the most widely used models in empirical volatility forecasting.
+Their forecasting performance is then compared with the **HAR-RV benchmark**, one of the most widely used models in empirical volatility forecasting.
 
 Together, these models provide a natural progression from fractional volatility frameworks to modern rough volatility modelling.
 
@@ -49,9 +49,9 @@ Six major equity indices were considered:
 * Nikkei 225
 * Hang Seng Index
 
-The sample spans approximately two decades and covers multiple market conditions, including periods of low volatility, financial crises and market stress.
+The sample spans approximately two decades and covers multiple market conditions, including periods of low volatility, financial crises, and episodes of market stress.
 
-The study focuses on one-day-ahead volatility forecasting.
+The study focuses on **one-day-ahead volatility forecasting**.
 
 ---
 
@@ -72,7 +72,7 @@ The empirical pipeline involved:
 * Out-of-sample evaluation
 * Statistical comparison through Diebold–Mariano tests
 
-Particular attention was devoted to ensuring that all models were evaluated under the same forecasting framework, allowing a fair comparison of predictive performance.
+All models were implemented and evaluated using a common forecasting framework to ensure a consistent and fair comparison across methodologies.
 
 ---
 
@@ -94,7 +94,7 @@ The crucial question remains whether capturing roughness translates into superio
 
 ## Key Findings
 
-The empirical results revealed a clear and somewhat surprising pattern.
+The empirical results revealed a clear pattern.
 
 Although the data exhibit rough volatility behaviour and the rough models successfully capture important structural characteristics of volatility dynamics, they do not systematically outperform the benchmark.
 
@@ -102,9 +102,7 @@ The HAR-RV model achieved the best overall forecasting performance in five of th
 
 The Hang Seng Index was the only market where the alternative models consistently showed an advantage over HAR-RV.
 
-These results suggest that:
-
-> **A model can provide a more realistic description of volatility without necessarily delivering more accurate forecasts.**
+These findings suggest that a model can provide a more realistic description of volatility without necessarily delivering more accurate forecasts.
 
 This is the central conclusion of the thesis.
 
@@ -114,7 +112,7 @@ This is the central conclusion of the thesis.
 
 One of the most valuable lessons from this project is the distinction between explanation and prediction.
 
-A model may be theoretically elegant, mathematically sophisticated and empirically realistic, yet still fail to generate superior forecasts.
+A model may be theoretically elegant, mathematically sophisticated, and empirically realistic, yet still fail to generate superior forecasts.
 
 The rough volatility framework has significantly improved our understanding of volatility dynamics, but forecasting performance ultimately remains an empirical question.
 
@@ -140,8 +138,8 @@ These directions may help determine whether the limited forecasting gains observ
 
 ---
 
-## Key Takeaway
+## Main Conclusion
 
-> **The existence of rough volatility in financial markets does not automatically imply that rough volatility models will outperform simpler alternatives in forecasting applications.**
+The existence of rough volatility in financial markets does not automatically imply that rough volatility models will outperform simpler alternatives in forecasting applications.
 
 Understanding volatility and forecasting volatility are closely related objectives, but they remain fundamentally different challenges.
