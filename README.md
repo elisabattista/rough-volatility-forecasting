@@ -92,7 +92,7 @@ Comparison of out-of-sample QLIKE losses between the HAR-RV benchmark and the Co
 
 ![DM Test Results](figures/dm_test_results.png)
 
-Diebold–Mariano tests used to assess whether differences in forecasting performance are statistically significant.
+Diebold–Mariano tests comparing the forecasting performance of Comte–Renault, RFSV and Rough Bergomi against the HAR-RV benchmark.
 
 ### Comte–Renault vs RFSV
 
