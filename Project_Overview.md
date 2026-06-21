@@ -8,7 +8,7 @@ Over the last decade, rough volatility has emerged as one of the most influentia
 
 This naturally raises an important practical question:
 
-> If rough volatility models describe market behaviour more realistically, do they also produce better volatility forecasts?
+> **If rough volatility models describe market behaviour more realistically, do they also produce better volatility forecasts?**
 
 This project was motivated by that question.
 
@@ -26,9 +26,9 @@ More recent empirical evidence suggests that volatility is not only persistent b
 
 To investigate these ideas, the thesis studies three models:
 
-- Comte–Renault
-- Rough Fractional Stochastic Volatility (RFSV)
-- Rough Bergomi
+* Comte–Renault
+* Rough Fractional Stochastic Volatility (RFSV)
+* Rough Bergomi
 
 Their forecasting performance is then compared with the HAR-RV benchmark, one of the most widely used models in empirical volatility forecasting.
 
@@ -36,18 +36,18 @@ Together, these models provide a natural progression from fractional volatility 
 
 ---
 
-## Dataset
+## Empirical Setting
 
 The empirical analysis is based on daily realized volatility data from the Oxford-Man Realized Library.
 
 Six major equity indices were considered:
 
-- EURO STOXX 50
-- FTSE 100
-- S&P 500
-- NASDAQ Composite
-- Nikkei 225
-- Hang Seng Index
+* EURO STOXX 50
+* FTSE 100
+* S&P 500
+* NASDAQ Composite
+* Nikkei 225
+* Hang Seng Index
 
 The sample spans approximately two decades and covers multiple market conditions, including periods of low volatility, financial crises and market stress.
 
@@ -61,16 +61,16 @@ A major objective of the project was not only to study these models theoreticall
 
 The empirical pipeline involved:
 
-- Data preprocessing and volatility transformation
-- HAR-RV benchmark construction
-- Comte–Renault implementation
-- RFSV implementation
-- Rough Bergomi implementation
-- Hurst exponent estimation
-- Parameter calibration and model selection
-- One-step-ahead forecasting
-- Out-of-sample evaluation
-- Statistical comparison through Diebold–Mariano tests
+* Data preprocessing and volatility transformation
+* HAR-RV benchmark construction
+* Comte–Renault implementation
+* RFSV implementation
+* Rough Bergomi implementation
+* Hurst exponent estimation
+* Parameter calibration and model selection
+* One-step-ahead forecasting
+* Out-of-sample evaluation
+* Statistical comparison through Diebold–Mariano tests
 
 Particular attention was devoted to ensuring that all models were evaluated under the same forecasting framework, allowing a fair comparison of predictive performance.
 
@@ -104,7 +104,7 @@ The Hang Seng Index was the only market where the alternative models consistentl
 
 These results suggest that:
 
-> A model can provide a more realistic description of volatility without necessarily delivering more accurate forecasts.
+> **A model can provide a more realistic description of volatility without necessarily delivering more accurate forecasts.**
 
 This is the central conclusion of the thesis.
 
@@ -130,11 +130,11 @@ A natural extension of this work is the use of high-frequency intraday data, whe
 
 Potential extensions include:
 
-- Intraday volatility forecasting
-- Dynamic parameter estimation
-- Alternative calibration procedures
-- Option-implied volatility information
-- Continuous-time calibration methods
+* Intraday volatility forecasting
+* Dynamic parameter estimation
+* Alternative calibration procedures
+* Option-implied volatility information
+* Continuous-time calibration methods
 
 These directions may help determine whether the limited forecasting gains observed at the daily frequency are due to the models themselves or to the characteristics of the data used in the analysis.
 
@@ -142,6 +142,6 @@ These directions may help determine whether the limited forecasting gains observ
 
 ## Key Takeaway
 
-> The existence of rough volatility in financial markets does not automatically imply that rough volatility models will outperform simpler alternatives in forecasting applications.
+> **The existence of rough volatility in financial markets does not automatically imply that rough volatility models will outperform simpler alternatives in forecasting applications.**
 
 Understanding volatility and forecasting volatility are closely related objectives, but they remain fundamentally different challenges.
