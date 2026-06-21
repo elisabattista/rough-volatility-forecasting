@@ -2,6 +2,7 @@
 
 **Master's Thesis – MSc Financial Risk and Data Analysis**
 **Sapienza University of Rome**
+**Final Grade: 110/110 cum laude**
 
 ---
 
@@ -20,6 +21,17 @@ This thesis investigates that question through a comparative study of three vola
 * Rough Bergomi
 
 Their forecasting performance is evaluated against the HAR-RV benchmark, one of the most widely used and successful models in empirical volatility forecasting.
+
+---
+
+## Models Compared
+
+| Model         | Category              |
+| ------------- | --------------------- |
+| HAR-RV        | Benchmark Model       |
+| Comte–Renault | Fractional Volatility |
+| RFSV          | Rough Volatility      |
+| Rough Bergomi | Rough Volatility      |
 
 ---
 
@@ -55,6 +67,85 @@ The empirical framework consists of:
 3. Estimation and calibration of the Comte–Renault, RFSV and Rough Bergomi models.
 4. Hurst exponent estimation to assess the roughness of volatility.
 5. One-day-ahead volatility forecasting.
+6. Out-of-sample performance evaluation.
+
+Forecasts are assessed using:
+
+* QLIKE Loss
+* Mean Squared Error (MSE) on log-volatility
+
+and statistically validated through Diebold–Mariano tests.
+
+---
+
+## Key Findings
+
+The empirical results reveal a striking contrast between theoretical sophistication and forecasting performance.
+
+* All six indices exhibit rough volatility behaviour, with estimated Hurst exponents below 0.5.
+* HAR-RV achieved the best overall out-of-sample forecasting performance in **5 out of 6** equity indices.
+* The Hang Seng Index was the only market where the alternative models consistently outperformed the benchmark.
+* Despite successfully capturing the rough nature of volatility, the RFSV and Rough Bergomi models did not deliver systematic forecasting improvements over HAR-RV at the daily frequency.
+* Diebold–Mariano tests confirmed that forecasting gains were limited and market-dependent.
+
+The main conclusion is:
+
+> **Greater mathematical sophistication does not automatically imply superior forecasting performance.**
+
+---
+
+## Implementation
+
+The project involved the complete implementation, calibration and evaluation of all forecasting models within a common empirical framework.
+
+Key components include:
+
+* HAR-RV implementation
+* Comte–Renault implementation
+* RFSV implementation
+* Rough Bergomi implementation
+* Hurst exponent estimation
+* Model calibration and parameter selection
+* Rolling-window performance analysis
+* Statistical comparison through Diebold–Mariano tests
+
+Particular attention was devoted to ensuring a fair and consistent out-of-sample comparison across all models.
+
+---
+
+## Repository Contents
+
+* [Full Master's Thesis](TESI_ELISA.pdf)
+* [Thesis Presentation](PRESENTATION.pdf)
+* [Project Overview](Project_Overview.md)
+
+Implementation notebooks and supporting material may be added in future updates.
+
+---
+
+## Future Work
+
+The findings should be interpreted within the daily-frequency framework adopted in this thesis.
+
+A natural extension of this research is the use of high-frequency intraday data, where roughness is expected to be more pronounced. Future work will investigate whether rough volatility models become more competitive when forecasting volatility at finer time scales.
+
+---
+
+## Author
+
+**Elisa Battista**
+
+MSc Financial Risk and Data Analysis
+Sapienza University of Rome
+
+### Research Interests
+
+* Quantitative Finance
+* Volatility Modelling
+* Rough Volatility
+* Financial Econometrics
+* Time Series Analysis
+* Forecasting
 6. Out-of-sample performance evaluation.
 
 Forecasts are assessed using:
