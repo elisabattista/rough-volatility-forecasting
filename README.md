@@ -78,11 +78,37 @@ The empirical results reveal a striking contrast between theoretical sophisticat
 * Despite successfully capturing the rough nature of volatility, the RFSV and Rough Bergomi models did not deliver systematic forecasting improvements over HAR-RV at the daily frequency.
 * Diebold–Mariano tests confirmed that forecasting gains were limited and market-dependent.
 
-### Main Conclusion
+---
+
+## Results Visualization
+
+### HAR-RV vs Comte–Renault
+
+![HAR vs CR](figures/har_vs_cr_qlike.png)
+
+Comparison of out-of-sample QLIKE losses between the HAR-RV benchmark and the Comte–Renault model across the six equity indices.
+
+### Diebold–Mariano Test Results
+
+![DM Test Results](figures/dm_test_results.png)
+
+Diebold–Mariano tests used to assess whether differences in forecasting performance are statistically significant.
+
+### Comte–Renault vs RFSV
+
+![CR vs RFSV](figures/cr_vs_rfsv_qlike.png)
+
+Comparison of out-of-sample QLIKE losses between the Comte–Renault and Rough Fractional Stochastic Volatility models.
+
+---
+
+## Main Conclusion
 
 > **Greater mathematical sophistication does not automatically translate into superior forecasting performance.**
 
-The existence of rough volatility in financial markets does not automatically imply that rough volatility models will outperform simpler alternatives in forecasting applications.
+While all markets exhibit rough volatility characteristics, rough volatility models did not consistently outperform the simpler HAR-RV benchmark at the daily forecasting horizon.
+
+This finding highlights the distinction between a model's ability to describe market dynamics and its ability to generate superior out-of-sample forecasts.
 
 ---
 
@@ -111,7 +137,7 @@ Particular attention was devoted to ensuring a fair and consistent out-of-sample
 * `PRESENTATION.pdf` — Thesis presentation
 * `Project_Overview.md` — Detailed discussion of the project and research process
 
-Implementation notebooks and supporting material will be added progressively.
+Implementation notebooks, calibration procedures and additional empirical results will be added progressively.
 
 ---
 
@@ -120,6 +146,14 @@ Implementation notebooks and supporting material will be added progressively.
 The findings should be interpreted within the daily-frequency framework adopted in this thesis.
 
 A natural extension of this research is the use of high-frequency intraday data, where roughness is expected to be more pronounced. Future work will investigate whether rough volatility models become more competitive when forecasting volatility at finer time scales.
+
+Potential future developments include:
+
+* Intraday realized volatility forecasting
+* High-frequency financial data analysis
+* Alternative rough volatility specifications
+* Machine learning approaches to volatility forecasting
+* Hybrid econometric–rough volatility models
 
 ---
 
@@ -138,3 +172,4 @@ Sapienza University of Rome
 * Financial Econometrics
 * Time Series Analysis
 * Forecasting
+
