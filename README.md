@@ -2,7 +2,6 @@
 
 **Master's Thesis – MSc Financial Risk and Data Analysis**
 **Sapienza University of Rome**
-**Final Grade: 110/110 cum laude**
 
 ---
 
@@ -20,18 +19,7 @@ This thesis investigates that question through a comparative study of three vola
 * Rough Fractional Stochastic Volatility (RFSV)
 * Rough Bergomi
 
-Their forecasting performance is evaluated against the HAR-RV benchmark, one of the most widely used and successful models in empirical volatility forecasting.
-
----
-
-## Models Compared
-
-| Model         | Category              |
-| ------------- | --------------------- |
-| HAR-RV        | Benchmark Model       |
-| Comte–Renault | Fractional Volatility |
-| RFSV          | Rough Volatility      |
-| Rough Bergomi | Rough Volatility      |
+Their forecasting performance is evaluated against the HAR-RV benchmark, one of the most widely used models in empirical volatility forecasting.
 
 ---
 
@@ -46,19 +34,56 @@ The analysis is based on daily realized volatility data from the Oxford-Man Real
 * Nikkei 225
 * Hang Seng Index
 
-The sample spans approximately two decades of market data and includes multiple market regimes, ranging from tranquil periods to episodes of severe financial stress.
+The sample spans approximately two decades of market data and includes multiple market regimes, ranging from tranquil periods to periods of severe financial stress.
 
 ---
 
 ## Methodology
 
-The project combines concepts from:
+The empirical framework consists of:
 
-* Volatility Forecasting
-* Financial Econometrics
-* Fractional Processes
-* Rough Volatility Modelling
-* Time Series Analysis
+1. HAR-RV benchmark implementation.
+2. Estimation and calibration of the Comte–Renault, RFSV and Rough Bergomi models.
+3. Hurst exponent estimation.
+4. One-day-ahead volatility forecasting.
+5. Out-of-sample performance evaluation.
+
+Forecasting performance is assessed using QLIKE and MSE loss functions and statistically validated through Diebold–Mariano tests.
+
+---
+
+## Key Findings
+
+* All six indices exhibit rough volatility behaviour, with estimated Hurst exponents below 0.5.
+* HAR-RV achieved the best overall forecasting performance in **5 out of 6** equity indices.
+* The Hang Seng Index was the only market where the alternative models consistently outperformed the benchmark.
+* Rough volatility models successfully captured important characteristics of volatility dynamics but did not provide systematic forecasting improvements at the daily frequency.
+* Diebold–Mariano tests confirmed that forecasting gains were limited and market-dependent.
+
+> **Greater mathematical sophistication does not automatically imply superior forecasting performance.**
+
+---
+
+## Repository Contents
+
+* [Full Master's Thesis](TESI_ELISA.pdf)
+* [Thesis Presentation](PRESENTATION.pdf)
+* [Project Overview](Project_Overview.md)
+
+---
+
+## Future Work
+
+A natural extension of this research is the use of high-frequency intraday data, where roughness is expected to be more pronounced. Future work will investigate whether rough volatility models become more competitive when forecasting volatility at finer time scales.
+
+---
+
+## Author
+
+**Elisa Battista**
+
+MSc Financial Risk and Data Analysis
+Sapienza University of Rome
 
 The empirical framework consists of:
 
