@@ -2,17 +2,17 @@
 
 ## Why This Project?
 
-Volatility forecasting lies at the heart of quantitative finance. Accurate volatility estimates are essential for risk management, derivative pricing, portfolio construction, and trading applications. Despite decades of research, forecasting volatility remains a remarkably difficult problem.
+Volatility forecasting lies at the heart of quantitative finance. Accurate volatility estimates are essential for risk management, derivative pricing, portfolio allocation, and systematic trading strategies. Despite decades of research, forecasting future volatility remains a challenging problem.
 
-In recent years, rough volatility models have emerged as one of the most influential developments in financial modelling. Their ability to reproduce important empirical features of financial markets has generated substantial interest among both researchers and practitioners.
+Over the last decade, rough volatility has emerged as one of the most influential developments in financial modelling. By incorporating fractional dynamics and rough paths into volatility processes, these models have demonstrated a remarkable ability to reproduce several stylized facts observed in financial markets.
 
-This naturally leads to a practical question:
+This naturally raises an important practical question:
 
 > **If rough volatility models describe market behaviour more realistically, do they also produce better volatility forecasts?**
 
 This project was motivated by that question.
 
-Rather than focusing solely on theoretical elegance, the objective was to evaluate whether the additional mathematical sophistication introduced by fractional and rough volatility models translates into measurable improvements in forecasting performance.
+Rather than focusing solely on theoretical elegance, the objective was to evaluate whether the additional mathematical sophistication introduced by fractional and rough volatility models translates into measurable improvements in out-of-sample forecasting performance.
 
 ---
 
@@ -20,27 +20,80 @@ Rather than focusing solely on theoretical elegance, the objective was to evalua
 
 The project follows the evolution of volatility modelling from fractional dynamics to modern rough volatility frameworks.
 
-The journey begins with the observation that volatility exhibits persistence and dependence structures that cannot be fully captured by classical stochastic volatility models.
+The starting point is the observation that volatility exhibits persistence and dependence structures that cannot be fully captured by classical stochastic volatility models.
 
 The **Comte–Renault model** represents an important step in this direction by introducing fractional Brownian motion and long-memory effects into volatility dynamics.
 
-More recent empirical evidence suggests that volatility is not only persistent but also highly irregular at short time scales. This observation gave rise to the rough volatility paradigm, where volatility paths are considerably rougher than previously assumed.
+More recent empirical evidence suggests that volatility is not only persistent but also highly irregular at short time scales. This insight gave rise to the rough volatility paradigm, according to which volatility trajectories are considerably rougher than previously assumed.
 
-To investigate these ideas, the thesis studies:
+To investigate this evolution, the thesis studies three models:
 
 * Comte–Renault
 * Rough Fractional Stochastic Volatility (RFSV)
 * Rough Bergomi
 
-and compares their forecasting performance with the widely used **HAR-RV benchmark**.
+and compares their forecasting performance against the widely used **HAR-RV benchmark**.
 
-Together, these models provide a natural progression from long-memory volatility models to modern rough volatility frameworks.
+Together, these models provide a natural progression from long-memory volatility modelling to modern rough volatility frameworks.
 
 ---
 
 ## Data and Empirical Framework
 
-The analysis is based on realized volatility data from the Oxford-Man Realized Library and covers six major equity indices:
+The analysis is based on daily realized volatility data from the Oxford-Man Realized Library and covers six major equity indices:
+
+* EURO STOXX 50
+* FTSE 100
+* S&P 500
+* NASDAQ Composite
+* Nikkei 225
+* Hang Seng Index
+
+The sample spans approximately two decades and includes a wide range of market environments, from periods of relative stability to episodes of extreme financial stress.
+
+For each index, realized volatility series are used to estimate model parameters, generate one-day-ahead forecasts, and evaluate predictive performance.
+
+The empirical framework is designed to ensure a fair comparison across all models through a common forecasting and evaluation procedure.
+
+---
+
+## Forecasting Framework
+
+The analysis follows four main steps:
+
+1. Construction of the HAR-RV benchmark.
+2. Calibration of the Comte–Renault, RFSV, and Rough Bergomi models.
+3. Estimation of the Hurst exponent to assess volatility roughness.
+4. Generation and evaluation of one-day-ahead volatility forecasts.
+
+Forecast accuracy is assessed using:
+
+* QLIKE Loss
+* Mean Squared Error (MSE) on log-volatility
+
+Statistical significance is evaluated through Diebold–Mariano tests.
+
+---
+
+## Main Findings
+
+The empirical results reveal a clear distinction between descriptive realism and forecasting performance.
+
+All six equity indices exhibit rough volatility behaviour, with estimated Hurst exponents significantly below 0.5.
+
+However, the superior ability of rough volatility models to describe volatility dynamics does not automatically translate into superior forecasting performance.
+
+The HAR-RV benchmark achieved the best overall out-of-sample results in five of the six markets considered, while the Hang Seng Index was the only market in which the alternative models consistently outperformed the benchmark.
+
+Overall, the findings suggest that increased model sophistication alone is not sufficient to guarantee better forecasts at the daily frequency.
+
+---
+
+## Future Directions
+
+The results obtained in this study are specific to daily realized volatility forecasting.
+
+A natural extension is the use of high-frequency intraday data, where volatility roughness is expected to be more pronounced. Future research will investigate whether rough volatility models become more competitive when forecasting volatility at finer time scales and under richer information sets.
 
 * EURO STOXX 50
 * FTSE 100
