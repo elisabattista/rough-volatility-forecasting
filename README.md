@@ -46,7 +46,7 @@ The empirical framework consists of:
 2. Estimation and calibration of Comte–Renault, RFSV and Rough Bergomi models.
 3. Hurst exponent estimation.
 4. One-day-ahead volatility forecasting.
-5. Out-of-sample evaluation.
+5. Out-of-sample performance evaluation.
 
 Forecasts are assessed using:
 
